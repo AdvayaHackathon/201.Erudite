@@ -13,7 +13,6 @@ Welcome to the Hackathon! We're excited to have you on board and can't wait to s
 - **Phone:** 8779075851  
 
 ### Team Members:
-- Pranavi Annabathula 
 - Vishak N 
 - Rohit R Vernekar 
 
