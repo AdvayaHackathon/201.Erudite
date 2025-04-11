@@ -1,44 +1,121 @@
-# Welcome Erudite 👋
+# Health Monitoring System
 
-Hello Team **Erudite** from **BGSCET**,
+A cutting-edge health monitoring solution that uses computer vision and remote photoplethysmography (rPPG) to measure vital signs without any wearable devices. This system leverages your device's camera to track heart rate, respiratory rate, and stress levels in real-time.
 
-Welcome to the Hackathon! We're excited to have you on board and can't wait to see what you'll build under the theme **"Improving healthcare through technology"** 
+## Features
 
-## Team Details
+- **Real-time Vital Sign Monitoring**
+  - Heart rate measurement using rPPG
+  - Respiratory rate detection
+  - Stress level assessment through HRV analysis
+  - Facial micro-expression analysis
+  - Posture tracking
 
-- **Team Number:** 201  
-- **Team Name:** Erudite
-- **Team Leader:** Arya Prashanth  
-- **Email:** abp030205@gmail.com  
-- **Phone:** 8779075851  
+- **No Additional Hardware Required**
+  - Uses standard webcam or smartphone camera
+  - Works in various lighting conditions
+  - Privacy-focused local processing
 
-### Team Members:
-- Vishak N 
-- Rohit R Vernekar 
+- **Advanced Analytics**
+  - Real-time data visualization
+  - Historical trend analysis
+  - Automated health insights
 
-## Problem Statement
+## Technical Stack
 
-> **Human Pose Estimation for Accessible and Early-Stage Health Insights**
+- **Frontend Framework**: Next.js with TypeScript
+- **UI Components**: TailwindCSS
+- **Computer Vision**: TensorFlow.js
+  - Face Landmarks Detection
+  - Pose Detection
+  - Custom rPPG implementation
+- **Data Visualization**: Chart.js
 
----
+## Getting Started
 
-### Let's Get Started 
+### Prerequisites
 
-This repository has been set up for your hackathon project. Use it to manage your code, collaborate, and share your progress.
+- Node.js 16.x or later
+- npm or yarn
+- A modern web browser
+- Webcam or smartphone camera
 
-**Important Guidelines - Please Read Carefully**
+### Installation
 
-- Do **not** make any commits **before the allotted start date and time**. Early commits may result in getting caught.
-- Commit your work **regularly** to showcase your progress throughout the hackathon.
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/health-monitor.git
+   cd health-monitor
+   ```
 
-- Maintain **professionalism and integrity** at all times. Any form of plagiarism or rule-breaking will lead to strict action.
+2. Install dependencies:
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
 
-Let's keep it fair, fun, and impactful! 
----
+3. Start the development server:
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
 
-**Good luck, Team Erudite! Happy coding!**
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-If you need any support during the hackathon, don't hesitate to reach out to the co-ordinators.
+## Usage
 
-Cheers,  
-_Advaya Hackathon Team_
+1. Grant camera permissions when prompted
+2. Position yourself in front of the camera
+3. Ensure good lighting conditions
+4. Click "Start Monitoring" to begin
+5. Stay relatively still while measurements are being taken
+6. View your real-time vital signs and trends
+
+## How It Works
+
+### Remote Photoplethysmography (rPPG)
+
+The system uses rPPG to detect subtle color changes in facial skin that correspond to blood volume variations. This allows for contactless measurement of:
+
+1. Heart Rate: By analyzing the periodic changes in skin color
+2. Respiratory Rate: Through chest movement detection
+3. Stress Levels: Via Heart Rate Variability (HRV) analysis
+
+### Face Detection and Tracking
+
+- Uses TensorFlow.js face-landmarks-detection model
+- Tracks 468 facial landmarks in real-time
+- Ensures accurate ROI (Region of Interest) selection for rPPG
+
+### Signal Processing
+
+1. Green channel extraction from video feed
+2. Signal detrending and filtering
+3. Fast Fourier Transform (FFT) for frequency analysis
+4. Peak detection and vital sign estimation
+
+## Privacy and Security
+
+- All processing is done locally in the browser
+- No video data is stored or transmitted
+- No personal information is collected
+
+## Contributing
+
+Contributions are welcome! Please read our contributing guidelines and submit pull requests to our repository.
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Acknowledgments
+
+- TensorFlow.js team for their excellent computer vision models
+- The scientific community for rPPG research and publications
+- Our contributors and supporters
+
+## Contact
+
+For questions and support, please open an issue in the GitHub repository. 
