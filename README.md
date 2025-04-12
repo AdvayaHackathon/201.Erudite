@@ -1,36 +1,44 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Welcome Erudite 👋
 
-## Getting Started
+Hello Team **Erudite** from **BGSCET**,
 
-First, run the development server:
+Welcome to the Hackathon! We're excited to have you on board and can't wait to see what you'll build under the theme **"Improving healthcare through technology"** 
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Team Details
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Team Number:** 201  
+- **Team Name:** Erudite
+- **Team Leader:** Arya Prashanth  
+- **Email:** abp030205@gmail.com  
+- **Phone:** 8779075851  
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Team Members:
+- Vishak N 
+- Rohit R Vernekar 
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Problem Statement
 
-## Learn More
+> **Human Pose Estimation for Accessible and Early-Stage Health Insights**
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Let's Get Started 
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+This repository has been set up for your hackathon project. Use it to manage your code, collaborate, and share your progress.
 
-## Deploy on Vercel
+**Important Guidelines - Please Read Carefully**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Do **not** make any commits **before the allotted start date and time**. Early commits may result in getting caught.
+- Commit your work **regularly** to showcase your progress throughout the hackathon.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Maintain **professionalism and integrity** at all times. Any form of plagiarism or rule-breaking will lead to strict action.
+
+Let's keep it fair, fun, and impactful! 
+---
+
+**Good luck, Team Erudite! Happy coding!**
+
+If you need any support during the hackathon, don't hesitate to reach out to the co-ordinators.
+
+Cheers,  
+_Advaya Hackathon Team_
