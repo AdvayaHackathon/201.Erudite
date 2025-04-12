@@ -1,0 +1,424 @@
+/* Auth Page Styles - Full-page with subtle animations */
+/* Color scheme: F1EFEC, D4C9BE, 123458, 030303 */
+
+.auth-container {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #F1EFEC 0%, #D4C9BE 100%);
+  background-attachment: fixed;
+  padding: 2rem;
+  animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.auth-card {
+  background: white;
+  width: 100%;
+  max-width: 650px; /* Increased from 500px to make the card wider */
+  padding: 3rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  animation: slideUp 0.6s ease-out;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.auth-card:hover {
+  box-shadow: 0 15px 35px rgba(18, 52, 88, 0.12);
+}
+
+.auth-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  position: relative;
+}
+
+.auth-header h1 {
+  font-size: 2rem;
+  color: #123458;
+  margin-bottom: 0.75rem;
+  position: relative;
+  display: inline-block;
+}
+
+.auth-header h1::after {
+  content: '';
+  position: absolute;
+  width: 50%;
+  height: 2px;
+  background: #123458;
+  bottom: -8px;
+  left: 25%;
+  transform: scaleX(0);
+  transition: transform 0.5s ease;
+  transform-origin: center;
+}
+
+.auth-card:hover .auth-header h1::after {
+  transform: scaleX(1);
+}
+
+.auth-header p {
+  color: #030303;
+  opacity: 0.7;
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  width: 100%; /* Ensure the form takes full width of the card */
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  position: relative;
+}
+
+.form-group label {
+  color: #123458;
+  font-weight: 500;
+  font-size: 0.875rem;
+  transition: color 0.3s ease;
+}
+
+.form-group input {
+  padding: 0.875rem 1rem;
+  border: 1px solid #D4C9BE;
+  border-radius: 0.75rem;
+  font-size: 1rem;
+  background: transparent;
+  transition: all 0.3s ease;
+  width: 100%;
+  color: #030303;
+}
+
+.form-group input::placeholder {
+  color: #666;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #123458;
+  box-shadow: 0 0 0 2px rgba(18, 52, 88, 0.05);
+}
+
+.form-group:focus-within label {
+  color: #0a1e33;
+}
+
+/* Add subtle highlight effect on input focus */
+.form-group::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(18, 52, 88, 0.03), transparent);
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  transition: width 0.6s ease;
+}
+
+.form-group:focus-within::after {
+  width: 100%;
+}
+
+.form-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+  width: 100%; /* Ensure options take full width */
+}
+
+.remember-me {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #030303;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.remember-me:hover {
+  transform: translateX(2px);
+}
+
+.remember-me input[type="checkbox"] {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 0.25rem;
+  border: 1px solid #D4C9BE;
+  cursor: pointer;
+  position: relative;
+  appearance: none;
+  -webkit-appearance: none;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.remember-me input[type="checkbox"]:checked {
+  background-color: #123458;
+  border-color: #123458;
+}
+
+.remember-me input[type="checkbox"]:checked::after {
+  content: '✓';
+  position: absolute;
+  color: white;
+  font-size: 0.75rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.forgot-password {
+  color: #123458;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.forgot-password::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1px;
+  background: #123458;
+  bottom: -2px;
+  left: 0;
+  transition: width 0.3s ease;
+}
+
+.forgot-password:hover {
+  color: #0a1e33;
+}
+
+.forgot-password:hover::after {
+  width: 100%;
+}
+
+.auth-submit {
+  width: 100%;
+  padding: 1rem;
+  margin-top: 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: white;
+  background: #123458;
+  border: none;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  display: block; /* Ensure block display for proper alignment */
+  text-align: center; /* Center the text within the button */
+  align-self: center; /* Center the button in the flex container */
+}
+
+.auth-submit::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: -100%;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0));
+  transition: left 0.7s ease;
+}
+
+.auth-submit:hover {
+  background: #0a1e33;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(18, 52, 88, 0.2);
+}
+
+.auth-submit:hover::after {
+  left: 100%;
+}
+
+.auth-footer {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.875rem;
+  color: #030303;
+  width: 100%; /* Ensure footer takes full width */
+}
+
+.auth-toggle {
+  background: none;
+  border: none;
+  color: #123458;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+  margin-left: 0.25rem;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.auth-toggle::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1px;
+  background: #123458;
+  bottom: -2px;
+  left: 0;
+  transition: width 0.3s ease;
+}
+
+.auth-toggle:hover {
+  color: #0a1e33;
+}
+
+.auth-toggle:hover::after {
+  width: 100%;
+}
+
+.auth-divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 2rem 0;
+  color: #030303;
+  opacity: 0.6;
+  font-size: 0.875rem;
+  width: 100%; /* Ensure divider takes full width */
+}
+
+.auth-divider::before,
+.auth-divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid #D4C9BE;
+  transition: all 0.3s ease;
+}
+
+.auth-divider span {
+  padding: 0 1rem;
+}
+
+.social-auth {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  width: 100%; /* Ensure social buttons container takes full width */
+  justify-content: space-between; /* Space out social buttons evenly */
+}
+
+.social-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border: 1px solid #D4C9BE;
+  border-radius: 0.75rem;
+  background: white;
+  color: #030303;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.social-btn:hover {
+  background: #F1EFEC;
+  border-color: #123458;
+}
+
+.social-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.social-btn img {
+  width: 24px;
+  height: 24px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .auth-container {
+    padding: 1.5rem;
+  }
+
+  .auth-card {
+    padding: 2rem;
+    max-width: 90%; /* Make card responsive but still wider */
+  }
+
+  .auth-header h1 {
+    font-size: 1.75rem;
+  }
+
+  .social-auth {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .auth-card {
+    padding: 1.5rem;
+  }
+
+  .auth-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .form-group input {
+    padding: 0.75rem;
+  }
+  
+  .auth-submit {
+    padding: 0.875rem;
+  }
+}
+
+.password-input-container {
+  position: relative;
+  width: 100%;
+}
+
+.password-input-container input {
+  width: 100%;
+  padding-right: 40px; /* Make space for the toggle button */
+}
+
+.toggle-password {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  color: #666;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.toggle-password:hover {
+  color: #123458;
+}

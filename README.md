@@ -1,121 +1,36 @@
-# Health Monitoring System
-
-A cutting-edge health monitoring solution that uses computer vision and remote photoplethysmography (rPPG) to measure vital signs without any wearable devices. This system leverages your device's camera to track heart rate, respiratory rate, and stress levels in real-time.
-
-## Features
-
-- **Real-time Vital Sign Monitoring**
-  - Heart rate measurement using rPPG
-  - Respiratory rate detection
-  - Stress level assessment through HRV analysis
-  - Facial micro-expression analysis
-  - Posture tracking
-
-- **No Additional Hardware Required**
-  - Uses standard webcam or smartphone camera
-  - Works in various lighting conditions
-  - Privacy-focused local processing
-
-- **Advanced Analytics**
-  - Real-time data visualization
-  - Historical trend analysis
-  - Automated health insights
-
-## Technical Stack
-
-- **Frontend Framework**: Next.js with TypeScript
-- **UI Components**: TailwindCSS
-- **Computer Vision**: TensorFlow.js
-  - Face Landmarks Detection
-  - Pose Detection
-  - Custom rPPG implementation
-- **Data Visualization**: Chart.js
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
 
-### Prerequisites
+First, run the development server:
 
-- Node.js 16.x or later
-- npm or yarn
-- A modern web browser
-- Webcam or smartphone camera
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-### Installation
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/health-monitor.git
-   cd health-monitor
-   ```
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-2. Install dependencies:
-   ```bash
-   npm install
-   # or
-   yarn install
-   ```
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-3. Start the development server:
-   ```bash
-   npm run dev
-   # or
-   yarn dev
-   ```
+## Learn More
 
-4. Open [http://localhost:3000](http://localhost:3000) in your browser
+To learn more about Next.js, take a look at the following resources:
 
-## Usage
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-1. Grant camera permissions when prompted
-2. Position yourself in front of the camera
-3. Ensure good lighting conditions
-4. Click "Start Monitoring" to begin
-5. Stay relatively still while measurements are being taken
-6. View your real-time vital signs and trends
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## How It Works
+## Deploy on Vercel
 
-### Remote Photoplethysmography (rPPG)
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-The system uses rPPG to detect subtle color changes in facial skin that correspond to blood volume variations. This allows for contactless measurement of:
-
-1. Heart Rate: By analyzing the periodic changes in skin color
-2. Respiratory Rate: Through chest movement detection
-3. Stress Levels: Via Heart Rate Variability (HRV) analysis
-
-### Face Detection and Tracking
-
-- Uses TensorFlow.js face-landmarks-detection model
-- Tracks 468 facial landmarks in real-time
-- Ensures accurate ROI (Region of Interest) selection for rPPG
-
-### Signal Processing
-
-1. Green channel extraction from video feed
-2. Signal detrending and filtering
-3. Fast Fourier Transform (FFT) for frequency analysis
-4. Peak detection and vital sign estimation
-
-## Privacy and Security
-
-- All processing is done locally in the browser
-- No video data is stored or transmitted
-- No personal information is collected
-
-## Contributing
-
-Contributions are welcome! Please read our contributing guidelines and submit pull requests to our repository.
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## Acknowledgments
-
-- TensorFlow.js team for their excellent computer vision models
-- The scientific community for rPPG research and publications
-- Our contributors and supporters
-
-## Contact
-
-For questions and support, please open an issue in the GitHub repository. 
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
